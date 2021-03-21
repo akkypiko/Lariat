@@ -1,0 +1,4 @@
+(executable
+ (public_name Lariat)
+ (name main)
+ (libraries Lariat))

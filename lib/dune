@@ -1,0 +1,10 @@
+(library
+ (name Lariat)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.ord)))
+
+(ocamllex
+  (modules ltl_lexer system_lexer))
+
+(menhir
+  (modules ltl_parser system_parser))

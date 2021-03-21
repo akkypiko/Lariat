@@ -1,0 +1,20 @@
+; 階段ぴょんぴょん
+; • A,Bの二人が階段の一番下にいる。
+; • 二人同時に階段をのぼる。一度に進むのは1段か2段。
+; • 10段目に着いたらゴール。
+; • 階段を登るのは二人の段差が2段以下のときのみ。相手より3段高くなったら、次は相手のいたところまで戻る。
+
+
+var posA = 0, posB = 0 ; 二人の初期位置
+
+update posA with
+| (posA < 10 && posB < 10) && posA - posB = 3 -> posB
+| (posA < 10 && posB < 10) && posA - posB <= 2 -> posA + 1
+| (posA < 10 && posB < 10) && posA - posB <= 2 -> posA + 2
+| else -> posA
+
+update posB with
+| (posA < 10 && posB < 10) && posB - posA = 3 -> posA
+| (posA < 10 && posB < 10) && posB - posA <= 2 -> posB + 1
+| (posA < 10 && posB < 10) && posB - posA <= 2 -> posB + 2
+| else -> posB
