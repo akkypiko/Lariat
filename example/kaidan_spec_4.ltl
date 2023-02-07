@@ -1,1 +1,1 @@
-!(posA = 0 && posB = 1)
+!(F(posB = 1) && G( (posB = 1) -> F(posB = 0)))
