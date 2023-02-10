@@ -55,6 +55,9 @@ let () =
   let w = Checker.check_emptiness system ba in
   Printf.printf "RESULT : %s\n" (Checker.show_witness_t w)
 
+(*
+
+
 (* ====================== SAMPLE ========================= *)
 open Lariat.System
 open Lariat.Prop
@@ -699,3 +702,6 @@ let tmp () =
     "=========================== CHECK ==================================\n";
   let w = Checker.check_emptiness system ba in
   Printf.printf "RESULT : %s\n" (Checker.show_witness_t w)
+
+
+  *)
