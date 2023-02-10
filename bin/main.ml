@@ -57,7 +57,6 @@ let () =
 
 (*
 
-
 (* ====================== SAMPLE ========================= *)
 open Lariat.System
 open Lariat.Prop
